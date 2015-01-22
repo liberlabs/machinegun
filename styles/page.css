@@ -1,0 +1,33 @@
+.clearfix {
+  clear: both;
+}
+.editing {
+  outline: none;
+  background: #fff;
+}
+
+.container {
+  width: 850px;
+  min-height: 200px;
+  margin: 30px auto;
+  background: #f1f1f1;
+  padding: 30px;
+}
+.container .container {
+  padding: 0;
+}
+
+.section {
+  width: 96%;
+  padding: 30px 2%;
+  min-height: 200px;
+  background: #ddd;
+}
+
+.twocol .container {
+  margin: 20px;
+  padding: 10px;
+  min-height: 150px;
+  width: 340px;
+  float: left;
+}

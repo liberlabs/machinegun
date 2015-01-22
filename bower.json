@@ -1,0 +1,21 @@
+{
+  "name": "Page Builder",
+  "version": "0.0.1",
+  "authors": [
+    "adhilnv <adhilazeeznv@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angularjs": "~1.3.1",
+    "normalize-css": "~3.0.2"
+  }
+}

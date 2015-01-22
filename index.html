@@ -1,0 +1,89 @@
+<!doctype html>
+<html ng-app="mgeditor">
+<head>
+  <meta charset="UTF-8">
+  <title>Site Builder</title>
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/angularjs/angular.js"></script>
+  <script src="scripts/main.js"></script>
+  <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body ng-controller="main">
+
+  <iframe src="/page/new.html" border="0" id="workspace" frameborder="0" mg-page-canvas></iframe>
+  <div id="sidebar">
+    <h2>Drag and drop components</h2>
+      <ul id="components">
+    <li ng-repeat="component in components" draggable="true" data-template="{{component.template}}" mg-component>{{component.name}}</li>
+  </ul>
+    <h2>Style Editor</h2>
+  <div id="style">
+    <label>Selector</label>
+    <input />
+    <label>Color</label>
+    <select>
+      <option value="#000">Black</option>
+      <option value="#fff">White</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+      <option value="green">Green</option>
+    </select>
+    <br>
+    <label>Font Size</label>
+    <select>
+      <option value="12px">12px</option>
+      <option value="14px">14px</option>
+      <option value="16px">16px</option>
+      <option value="18px">18px</option>
+      <option value="20px">20px</option>
+    </select>
+  </div>
+  </div>
+
+  <div class="hide" id="select_highlight">
+    <span class="type"></span>
+    <a href="#" class="delete">X</a>
+    <a href="#" class="draghandle" draggable="true">+</a>
+    <a href="#" class="position">▓</a>
+  </div>
+
+  <div class="hide" id="mouseover_highlight">
+    <span class="type"></span>
+  </div>
+
+  <div class="hide" id="position_highlight">
+  <hr class="width_line">
+  <span class="width"></span>
+  <div class="height_line">
+    <span class="height"></span>
+  </div>
+  </div>
+
+  <div class="hide" id="text_formatters" >
+    <ul>
+      <li><a href="#" data-command="bold" class="bold">B</a></li>
+      <li><a href="#" data-command="italic" class="italic"><em>I</em></a></li>
+      <li><a href="#" data-command="underline" class="underline">U</a></li>
+      <li><a href="#" data-command="justifyleft" class="justifyleft">L</a></li>
+      <li><a href="#" data-command="justifycenter" class="justifycenter">C</a></li>
+      <li><a href="#" data-command="justifyright" class="justifyright">R</a></li>
+      <div class="clearfix"></div>
+    </ul>
+  </div>
+
+  <div class="hide" id="drag_indicator">
+    <span>Insert Here</span>
+  </div>
+
+  <div class="margin_highlight top hide"></div>
+  <div class="margin_highlight right hide"></div>
+  <div class="margin_highlight bottom hide"></div>
+  <div class="margin_highlight left hide"></div>
+  <div class="padding_highlight top hide"></div>
+  <div class="padding_highlight right hide"></div>
+  <div class="padding_highlight bottom hide"></div>
+  <div class="padding_highlight left hide"></div>
+</body>
+</html>
